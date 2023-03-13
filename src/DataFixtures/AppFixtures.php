@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\Agent;
 use App\Entity\Cible;
+use App\Entity\Contact;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
@@ -95,7 +96,7 @@ class AppFixtures extends Fixture
             $manager->persist($xavier);
 
 
-        //Cibles 
+        //Cibles   //----------------------------------------------------------------------------------
 
         $crapeau = new Cible;
         $crapeau->setName('Mortimer')
@@ -167,6 +168,81 @@ class AppFixtures extends Fixture
             ->setDateOfBirth($this->faker->dateTimeBetween($startDate = '-80 years', $endDate = '-22 years', $timezone = null))
             ->setCodeName('Lady griffe');
             $manager->persist($lady);
+
+
+        //Contact  //-----------------------------------------------------
+
+
+        $iceberg = new Contact;
+        $iceberg->setName('Bobby')
+            ->setFirstName('Drake')
+            ->setDateOfBirth($this->faker->dateTimeBetween($startDate = '-80 years', $endDate = '-22 years', $timezone = null))
+            ->setCodeName('Iceberg');
+            $manager->persist($iceberg);
+
+        $rocket = new Contact;
+        $rocket->setName('Sam')
+            ->setFirstName('Guthrie ')
+            ->setDateOfBirth($this->faker->dateTimeBetween($startDate = '-80 years', $endDate = '-22 years', $timezone = null))
+            ->setCodeName('Rocket ');
+            $manager->persist($rocket);
+        
+        $jubile = new Contact;
+        $jubile->setName('Jubilation')
+            ->setFirstName('Lee')
+            ->setDateOfBirth($this->faker->dateTimeBetween($startDate = '-80 years', $endDate = '-22 years', $timezone = null))
+            ->setCodeName('Jubilé');
+            $manager->persist($jubile);
+
+        $technokinesiste = new Contact;
+        $technokinesiste->setName('Chris')
+            ->setFirstName('Bradley')
+            ->setDateOfBirth($this->faker->dateTimeBetween($startDate = '-80 years', $endDate = '-22 years', $timezone = null))
+            ->setCodeName('Technokinésiste');
+            $manager->persist($technokinesiste);
+
+        $multiple = new Contact;
+        $multiple->setName('James')
+            ->setFirstName('Madrox')
+            ->setDateOfBirth($this->faker->dateTimeBetween($startDate = '-80 years', $endDate = '-22 years', $timezone = null))
+            ->setCodeName('Multiple-Man');
+            $manager->persist($multiple);
+
+        $fauve = new Contact;
+        $fauve->setName('Hank')
+            ->setFirstName('Philip')
+            ->setDateOfBirth($this->faker->dateTimeBetween($startDate = '-80 years', $endDate = '-22 years', $timezone = null))
+            ->setCodeName('Le fauve');
+            $manager->persist($fauve);
+
+        
+        $X = new Contact;
+        $X->setName('Laura')
+            ->setFirstName('Kinney')
+            ->setDateOfBirth($this->faker->dateTimeBetween($startDate = '-80 years', $endDate = '-22 years', $timezone = null))
+            ->setCodeName('X-23');
+            $manager->persist($X);
+       
+        $yashida = new Contact;
+        $yashida->setName('Mariko')
+            ->setFirstName('Yashida')
+            ->setDateOfBirth($this->faker->dateTimeBetween($startDate = '-80 years', $endDate = '-22 years', $timezone = null))
+            ->setCodeName('fille de Yashida');
+            $manager->persist($yashida);
+
+        $medecin = new Contact;
+        $medecin->setName('Moira')
+            ->setFirstName('Sarkissian')
+            ->setDateOfBirth($this->faker->dateTimeBetween($startDate = '-80 years', $endDate = '-22 years', $timezone = null))
+            ->setCodeName('Medecin');
+            $manager->persist($medecin);
+
+        $volante = new Contact;
+        $volante->setName('Angel')
+            ->setFirstName('Salvadore')
+            ->setDateOfBirth($this->faker->dateTimeBetween($startDate = '-80 years', $endDate = '-22 years', $timezone = null))
+            ->setCodeName('Volante');
+            $manager->persist($volante);
 
 
         
