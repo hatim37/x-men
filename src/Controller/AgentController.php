@@ -30,7 +30,7 @@ class AgentController extends AbstractController
             $agent = $paginator->paginate(
             $repository->findAll(), /* query NOT result */
             $request->query->getInt('page', 1), /*page number*/
-            9 /*limit per page*/
+            6 /*limit per page*/
         );
 
         return $this->render('pages/agent/index.html.twig', [
